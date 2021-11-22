@@ -20,8 +20,8 @@ const App = () => {
           <Stack.Navigator
             initialRouteName="Home"
             screenOptions={{
-              headerTintColor: 'white',
-              headerStyle: { backgroundColor: 'tomato' }
+              // headerTintColor: 'white',
+              // headerStyle: { backgroundColor: 'tomato' }
             }}>
             <Stack.Screen name="Register" component={Register} />
             <Stack.Screen name="Login" component={Login} />
