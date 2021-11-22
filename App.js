@@ -1,32 +1,37 @@
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import React from 'react';
-import {SafeAreaView, StyleSheet} from 'react-native';
-import Pages from './src/pages';
+import { SafeAreaView } from 'react-native';
+import { DefaultTheme, Provider as PaperProvider } from 'react-native-paper';
+import Home from './src/pages/home';
+import Login from './src/pages/login';
+import Register from './src/pages/register';
+import { theme } from './src/core/theme'
+
+
+const Stack = createNativeStackNavigator();
+
 
 const App = () => {
   return (
-    <SafeAreaView>
-      <Pages />
-    </SafeAreaView>
+    <PaperProvider theme={theme}>
+      <SafeAreaView style={{ flex: 1 }}>
+        <NavigationContainer>
+          <Stack.Navigator
+            initialRouteName="Home"
+            screenOptions={{
+              headerTintColor: 'white',
+              headerStyle: { backgroundColor: 'tomato' }
+            }}>
+            <Stack.Screen name="Register" component={Register} />
+            <Stack.Screen name="Login" component={Login} />
+            <Stack.Screen name="Home" component={Home} />
+          </Stack.Navigator>
+        </NavigationContainer>
+      </SafeAreaView>
+    </PaperProvider>
   );
 };
 
-const styles = StyleSheet.create({
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-  },
-  highlight: {
-    fontWeight: '700',
-  },
-});
 
 export default App;
