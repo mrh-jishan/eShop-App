@@ -19,9 +19,9 @@ const Register = ({ navigation }) => {
                 // error={!!email.error}
                 // errorText={email.error}
                 autoCapitalize="none"
-                autoCompleteType="text"
-                textContentType="text"
-                keyboardType="first-name"
+                // autoCompleteType="text"
+                // textContentType="text"
+                // keyboardType="first-name"
             />
 
             <TextInput
@@ -32,9 +32,9 @@ const Register = ({ navigation }) => {
                 // error={!!email.error}
                 // errorText={email.error}
                 autoCapitalize="none"
-                autoCompleteType="text"
-                textContentType="text"
-                keyboardType="first-name"
+                // autoCompleteType="text"
+                // textContentType="text"
+                // keyboardType="first-name"
             />
 
             <TextInput
@@ -45,9 +45,9 @@ const Register = ({ navigation }) => {
                 // error={!!email.error}
                 // errorText={email.error}
                 autoCapitalize="none"
-                autoCompleteType="email"
-                textContentType="emailAddress"
-                keyboardType="email-address"
+                // autoCompleteType="email"
+                // textContentType="emailAddress"
+                // keyboardType="email-address"
             />
           
             <TextInput

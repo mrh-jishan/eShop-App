@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet } from 'react-native';
 import Background from '../../components/Background';
 import Button from '../../components/Button';
 import Logo from '../../components/Logo';
@@ -7,8 +7,8 @@ import Logo from '../../components/Logo';
 const Home = ({ navigation }) => {
     return (
         <Background style={styles.container}>
-           <Logo />
-           
+            <Logo />
+
             <Button mode="contained" onPress={() => navigation.navigate('Login')}>
                 Login
             </Button>
